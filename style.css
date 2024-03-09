@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html {
+    /*PERMITE DESLIZAR CUANDO HAGO CLICK EN LOS LINKS DEL MENU*/
+    scroll-behavior: smooth;
+}
+/*MENU*/
+.contenedor-header{
+    background: #1E2326;
+    position: fixed;
+    inline-size: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-inline-size: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    font-family: 'Rightteous';
+    font-size: 35px;
+    color: #1c92b6;
+    text-decoration: none;
+    inline-size: 10px auto;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover{
+    color:#1c92b6
+}
+.nav-responsive{
+    background-color: #1c92b6;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/*SECCION INICIO*/
+.inicio{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)), url(img/fondo1.png);
+    background-size: cover;
+    block-size: 120vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.inicio .contenido-banner{
+    padding: 20px;
+    background-color: #1E2326;
+    max-inline-size: 350px;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 40px;
+    
+}
+.inicio .contenido-banner img{
+    margin-block-start: 40px;
+    border: 10px solid #1c92b6;
+    border-radius: 100%;
+    display: block;
+    inline-size: 80%;
+    margin: auto;
+}
+.inicio .contenido-banner h1{
+    margin-block-start: 30px;
+    font-size: 30px;
+    font-family: 'Rightteous';
+}
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+.inicio .contenido-banner .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    inline-size: 42px;
+    block-size: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+.inicio .contenido-banner .redes a:hover{
+    background-color: #1c92b6;
+}
+
+/* SOBRE MI */
+.sobremi {
+    background-color: #1E2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.sobremi .contenido-seccion{
+    max-inline-size: 1100px;
+    margin: auto;
+}
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Rightteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.sobremi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-block-end: 20px;
+}
+.sobremi .contenido-seccion p span{
+    color: #1c92b6;
+    font-weight: bold; 
+}
+.sobremi .fila{
+    display: flex;
+}
+.sobremi .fila .col{
+    inline-size: 50%;
+}
+.sobremi .fila .col h3{
+    font-size: 28px;
+    font-family: 'Rightteous';
+    margin-block-end: 25px;
+}
+.sobremi .fila .col ul{
+    list-style: none;
+}
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    color: #1c92b6;
+    inline-size: 130px;
+}
+.sobremi .fila .col ul li span {
+    background-color: #1c92b6;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.sobremi .fila .col .contenido-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobremi .fila .col .contenido-intereses .interes{
+    inline-size: 100px;
+    block-size: 100px;
+    background-color: #252a2e;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.sobremi .fila .col .contenido-intereses .interes:hover{
+    background-color: #1c92b6;
+}
+.sobremi .fila .col .contenido-intereses .interes i {
+    font-size: 30px;
+    margin-block-end: 10px;
+}
+.sobremi button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    inline-size: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.sobremi button .overlay{
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 0;
+    block-size: 100%;
+    background-color: #1c92b6;
+    z-index: -1;
+    transition: 1s;
+}
+.sobremi button:hover .overlay{
+    inline-size: 100%;
+}
+
+/* SECCION SKILLS */
+.skills{
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50px 20px;
+}
+.skills .contenido-seccion{
+    max-inline-size: 1100px;
+    margin: auto;
+}
+.skills h2{
+    font-size: 48px;
+    font-family: 'Rightteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.skills .fila{
+    display: flex;
+}
+.skills .fila .col{
+    inline-size: 50%;
+    padding: 0 20px;
+}
+.skills .fila .col h3{
+    font-size: 28px;
+    font-family: 'Rightteous';
+    margin-block-end: 10px;
+}
+.skills .skill .barra-skill{
+    block-size: 8px;
+    inline-size: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-block-end: 30px;
+}
+.skills .skill .progreso{
+    background-color: #1c92b6;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    block-size: 8px;
+}
+.skills .skill .barra-skill span{
+    position: absolute;
+    block-size: 40px;
+    inline-size: 40px;
+    background-color: #1c92b6;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    inset-block-start: -17px;
+    inset-inline-end: -15px;
+    font-size: 14px;
+}
+
+/*TECNICAS*/
+.skills .skill .python{
+    inline-size: 0%;
+    animation: 2s python forwards;
+}
+@keyframes python{
+    0%{inline-size: 0%;}
+    100%{inline-size: 80%;}
+
+}
+.skills .skill .htmlcss{
+    inline-size: 0%;
+    animation: 2s htmlcss forwards;
+}
+@keyframes htmlcss{
+    0%{inline-size: 0%;}
+    100%{inline-size: 80%;}
+
+}
+.skills .skill .javascript{
+    inline-size: 0%;
+    animation: 2s javascript forwards;
+}
+@keyframes javascript{
+    0%{inline-size: 0%;}
+    100%{inline-size: 70%;}
+
+}
+.skills .skill .sql{
+    inline-size: 0%;
+    animation: 2s sql forwards;
+}
+@keyframes sql{
+    0%{inline-size: 0%;}
+    100%{inline-size: 80%;}
+
+}
+.skills .skill .office{
+    inline-size: 0%;
+    animation: 2s office forwards;
+}
+@keyframes office{
+    0%{inline-size: 0%;}
+    100%{inline-size: 80%;}
+
+}
+.skills .skill .git{
+    inline-size: 0%;
+    animation: 2s git forwards;
+}
+@keyframes git{
+    0%{inline-size: 0%;}
+    100%{inline-size: 70%;}
+
+}
+.skills .skill .scrum{
+    inline-size: 0%;
+    animation: 2s scrum forwards;
+}
+@keyframes scrum{
+    0%{inline-size: 0%;}
+    100%{inline-size: 80%;}
+
+}
+.skills .skill .aspnet{
+    inline-size: 0%;
+    animation: 2s aspnet forwards;
+}
+@keyframes aspnet{
+    0%{inline-size: 0%;}
+    100%{inline-size: 60%;}
+
+}
+
+/*PROFESIONAL*/
+.skills .skill .aprendizaje{
+    inline-size: 0%;
+    animation: 2s aprendizaje forwards;
+}
+@keyframes aprendizaje{
+    0%{inline-size: 0%;}
+    100%{inline-size: 100%;}
+
+}
+.skills .skill .trabajoequipo{
+    inline-size: 0%;
+    animation: 2s trabajoequipo forwards;
+}
+@keyframes trabajoequipo{
+    0%{inline-size: 0%;}
+    100%{inline-size: 100%;}
+
+}
+.skills .skill .autonomia{
+    inline-size: 0%;
+    animation: 2s autonomia forwards;
+}
+@keyframes autonomia{
+    0%{inline-size: 0%;}
+    100%{inline-size: 90%;}
+
+}
+.skills .skill .analisis{
+    inline-size: 0%;
+    animation: 2s analisis forwards;
+}
+@keyframes analisis{
+    0%{inline-size: 0%;}
+    100%{inline-size: 80%;}
+
+}
+.skills .skill .adaptacion{
+    inline-size: 0%;
+    animation: 2s adaptacion forwards;
+}
+@keyframes adaptacion{
+    0%{inline-size: 0%;}
+    100%{inline-size: 95%;}
+
+}
+.skills .skill .creatividad{
+    inline-size: 0%;
+    animation: 2s creatividad forwards;
+}
+@keyframes creatividad{
+    0%{inline-size: 0%;}
+    100%{inline-size: 80%;}
+
+}
+.skills .skill .dedicacion{
+    inline-size: 0%;
+    animation: 2s dedicacion forwards;
+}
+@keyframes dedicacion{
+    0%{inline-size: 0%;}
+    100%{inline-size: 100%;}
+
+}
+.skills .skill .resiliencia{
+    inline-size: 0%;
+    animation: 2s resiliencia forwards;
+}
+@keyframes resiliencia{
+    0%{inline-size: 0%;}
+    100%{inline-size: 95%;}
+
+}
+.skills .skill .responsabilidad{
+    inline-size: 0%;
+    animation: 2s responsabilidad forwards;
+}
+@keyframes responsabilidad{
+    0%{inline-size: 0%;}
+    100%{inline-size: 100%;}
+
+}
+.skills .skill .disciplina{
+    inline-size: 0%;
+    animation: 2s disciplina forwards;
+}
+@keyframes disciplina{
+    0%{inline-size: 0%;}
+    100%{inline-size: 100%;}
+
+}
+
+/* CURRICULUM */
+.curriculum{
+    background-color: #1E2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.curriculum .contenido-seccion{
+    max-inline-size: 1100px;
+    margin: auto;
+}
+.curriculum h2{
+    font-size: 48px;
+    font-family: 'Rightteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.curriculum .fila{
+    display: flex;
+    justify-content: space-between;
+}
+.curriculum .fila .col{
+    inline-size: 49%;
+    padding: 0 20px;
+}
+.curriculum .fila .col h3{
+    font-size: 28px;
+    font-family: 'Rightteous';
+    margin-block-end: 25px;
+}
+.curriculum .fila .izquierda{
+    border-inline-end: 2px solid #252a2e;
+}
+.curriculum .fila .derecha{
+    border-inline-start: 2px solid #252a2e;
+}
+.curriculum .fila .item{
+    padding: 25px;
+    margin-block-end: 30px;
+    background-color: #252a2e;
+    position: relative;
+}
+.curriculum .fila .item h4{
+    font-size: 20px;
+    margin-block-end: 10px;
+}
+.curriculum .fila .item .casa{
+    color: #1c92b6;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+.curriculum .fila .item .fecha{
+    color: #1c92b6;
+    display: block;
+    margin-block-end: 10px;
+}
+.curriculum .fila .item p{
+    line-height: 24px;
+}
+.curriculum .fila .izq{
+    border-inline-end: 2px solid #1c92b6;
+    margin-inline-end: 20px;
+}
+.curriculum .fila .der{
+    border-inline-start: 2px solid #1c92b6;
+    margin-inline-start: 20px;
+}
+.curriculum .fila .item .conectori{
+    block-size: 2px;
+    background-color: #1c92b6;
+    inline-size: 47px;
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-end: -47px;
+    z-index: 5;
+}
+.curriculum .fila .item .conectori .circuloi{
+    display: block;
+    block-size: 10px;
+    inline-size: 10px;
+    border-radius: 50%;
+    background-color: #1c92b6;
+    float: inline-end;
+    position: relative;
+    inset-block-end: 4px;
+}
+.curriculum .fila .item .conectord{
+    block-size: 2px;
+    background-color: #1c92b6;
+    inline-size: 47px;
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: -47px;
+    z-index: 5;
+}
+.curriculum .fila .item .conectord .circulod{
+    display: block;
+    block-size: 10px;
+    inline-size: 10px;
+    border-radius: 50%;
+    background-color: #1c92b6;
+    float: inline-start;
+    position: relative;
+    inset-block-end: 4px;
+}
+
+/* PROYECTOS */
+.proyectos{
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50px 20px;
+}
+.proyectos .contenido-seccion{
+    max-inline-size: 1100px;
+    margin: auto;
+}
+.proyectos h2{
+    font-size: 48px;
+    font-family: 'Rightteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.proyectos .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.proyectos .galeria .proyecto{
+    position: relative;
+    max-inline-size: 340px;
+    block-size: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.proyectos .galeria .proyecto img{
+    inline-size: 100%;
+    display: block;
+    inline-size: 100%;
+    block-size: 340px;
+    
+}
+.proyectos .galeria .proyecto .overlay{
+    position: absolute;
+    inset-block-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(28, 159, 182, 0.8),rgba(28, 141, 182, 0.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.proyectos .galeria .proyecto .overlay h3{
+    margin-block-end: 20px;
+    transition: 1s;
+}
+.proyectos .galeria .proyecto .overlay:hover{
+    opacity: 1;
+}
+.proyectos .galeria .proyecto .overlay:hover h3{
+    margin-block-end: 0px;
+}
+
+/* FOOTER */
+footer{
+    background-color: #1E2326;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    inline-size: 100%;
+}
+footer .redes{
+    margin-block-end: 20px;
+}
+.copyright{
+    color: white;
+    font-size: 13px;
+    margin: 20px;
+}
+footer .arriba{
+    display: block;
+    inline-size: 50px;
+    block-size: 50px;
+    background-color: #1c92b6;
+    color: #fff;
+    position: absolute;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    inset-block-start: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        inset-inline-end: 0;
+        inset-block-start: 75px;
+        background-color: #252a2e;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-block-end: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:780px) {
+    .sobremi .fila{
+        display: block;
+    }    
+    .sobremi .fila .col{
+        inline-size: fit-content;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        inline-size: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        inline-size: 100%;
+    }
+
+    .curriculum .fila{
+        display: block;
+    }
+    .curriculum .fila .col{
+        inline-size: 90%;
+    }
+    .curriculum .fila .derecha{
+        margin-inline-start: 20px;
+    }
+
+    .proyectos .galeria{
+        display: block;
+        inline-size: 100%;
+    }
+    .proyectos .galeria .proyecto{
+        max-inline-size: 100%;
+    }
+    .proyectos .galeria .proyecto img{
+        inline-size: 100%;
+    }
+}

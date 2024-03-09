@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portafolio Esteban Salas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- MENU -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Esteban</a>
+            </div>
+            <nav id="nav" >
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar();">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar();">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar();">SKILLS</a></li>
+                    <li><a href="#profesion" onclick="seleccionar();">PROFESIÓN</a></li>
+                    <li><a href="#proyectos" onclick="seleccionar();">PROYECTOS</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu();">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!--INICIO-->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenido-img">
+                <img src="img/imgperfil.jpg" alt="">
+            </div>
+            <h1>ESTEBAN DAVID SALAS CORTINA</h1>
+            <h2>ANALISTA Y DESARROLLADOR DE SOFTWARE</h2>
+            <div class="redes">
+                <a href="https://github.com/estebansalas94" target="_blank"><i class="fa-brands fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/esteban-david-salas-cortina-705a80202" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://wa.me/+573247046523" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://web.facebook.com/estebansalas.edsc" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </section> 
+
+    <!-- SOBRE MI -->
+    <section class="sobremi" id="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mi</h2>
+            <p><span>Mi nombre es Esteban David Salas Cortina,</span> tengo 20 años de edad y soy
+                tecnólogo en análisis y desarrollo de sistemas de información. Poseo experiencia en programación (Python,
+                C#, JAVA, HTML, CSS, JavaScript, ASP.NET) y gestión de bases de datos SQL (SQL Server, MySQL). Trabajo muy
+                bien en equipo e independiente, aplicando metodologías como Scrum y Kanban. Mi enfoque se centra en la
+                resolución de problemas y el apoyo al equipo. Soy activo, disciplinado y rápido
+                para aprender, destacado por mi capacidad de adaptación y
+                perseverancia. Emocionado por seguir creciendo en mi carrera tecnológica.
+            </p>
+            
+            <div class="fila">
+                <!-- DATOS PERSONALES -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            04-01-2004
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            (+57) 324 7046523
+                        </li>
+                        <li>
+                            <strong>Correo</strong>
+                            estebansalas0404@gmail.com
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Cartagena de Indias, Colombia
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>Analista y Desarrollador de Software</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- INTERESES -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenido-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-futbol"></i>
+                            <span>FUTBOL</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-laptop"></i>
+                            <span>LAPTOP</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LEER</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-motorcycle"></i>
+                            <span>MOTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>FOTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a id="pdfLink" href="img/CURRICULUM - Esteban David SalasCortina.pdf" style="display: none;"></a>
+            <button onclick="descargarPdf();">
+                Descargar Curriculum <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- TECNICAS SKILLS  -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span>Python</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML5 Y CSS3</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>JavaScript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>SQL (MySQL y SQL Server)</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Office 365</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>GIT y GITHUB</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>SCRUM y KANBAN</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Power Platform</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>65%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PROFESIONAL SKILLS  -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Aprendizaje Continuo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Autonomía</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Análisis</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Adaptación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Resiliencia</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Responsabilidad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Disciplina</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRICULUM -->
+    <section class="curriculum" id="profesion">
+        <div class="contenido-seccion">
+            <h2>Profesión</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Análisis y desarrollo de sistemas de información</h4>
+                        <span class="casa">Servicio Nacional de Aprendizaje</span>
+                        <span class="fecha">2021-2023</span>
+                        <p>Enfocado en el análisis, desarrollo, adaptación y programación de sistemas 
+                            informáticos, contribuyendo a la solución de problemas en dichos sistemas. 
+                            Proyectar y modelar software a través de metodologías adecuadas. Desarrollar 
+                            y testear aplicaciones en tecnologías de desarrollo de software.</p>
+                         <div class="conectori">
+                             <div class="circuloi"></div>
+                         </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Técnico en Sistemas</h4>
+                        <span class="casa">Servicio Nacional de Aprendizaje</span>
+                        <span class="fecha">2019-2020</span>
+                        <p>Formación laboral calificado en las áreas de redes sociales, mantenimiento de equipos 
+                            de cómputo y redes de computadores, prevenir los problemas en los equipos 
+                            informáticos o hacerle el mantenimientos a estos de forma periódica.</p>
+                         <div class="conectori">
+                             <div class="circuloi"></div>
+                         </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Bachiller Técnico</h4>
+                        <span class="casa">I.E San Francisco de Asís</span>
+                        <span class="fecha">2018-2020</span>
+                        <p>Formacion secundaria bachiller técnico</p>
+                         <div class="conectori">
+                             <div class="circuloi"></div>
+                         </div>
+                    </div>
+                </div>
+                <div class="col derecha">
+                    <h3>Experiencia Laboral</h3>
+                    <div class="item der">
+                        <h4>Auxiliar de Servicios TIC</h4>
+                        <span class="casa">Universidad Tecnológica de bolívar</span>
+                        <span class="fecha">09/02/2023 - 08/08/2023</span>
+                        <p>Brindar soporte técnico a sistemas de cómputo e informáticos utilizados por empleados de la entidad,
+                            presentar informes por medio de analísis de datos en oracle y ademas utilizando Power BI y Excel.
+                            Creación e innovación de aplicativos desarrollados con Python (HTML y CSS) y 
+                            Power Apps (Sharepoint y Power Automate). Y por ultimo brindaba soporte al sistema 
+                            operativo Windows.
+                        </p>
+                         <div class="conectord">
+                             <div class="circulod"></div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="proyectos" id="proyectos">
+        <div class="contenido-seccion">
+            <h2>Proyectos</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img  src="img/JUEGO SECRETO.png" alt="Juego del numero secreto">
+                    <div id="juegosecreto" onclick="linkJuegoSecreto();" class="overlay">
+                        <h3>Juego Del Número Secreto</h3>
+                        <p>Desarrollado con HTML5, CSS3 y JavaScript</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/utensilios.jpg" alt="Barberia Alura">
+                    <div id="barberiaAlura" onclick="linkBarberiaAlura();" class="overlay">
+                        <h3>Barberia Alura</h3>
+                        <p>Desarrollado con HTML5 y CSS3 para FrontEnd</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/LG.png" alt="Login primavera">
+                    <div id="loginPrimavera" onclick="linkLoginPrimavera();" class="overlay">
+                        <h3>Login Primavera</h3>
+                        <p>Desarrollado con HTML5 y CSS3 para FrontEnd</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/CA.png" alt="Cartelera de juegos">
+                    <div id="carteleraJuegos" onclick="linkCarteleraJuegos();" class="overlay">
+                        <h3>Cartelera de Juegos</h3>
+                        <p>Desarrollado con HTML5 y CSS3 para FrontEnd</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/py.jpg" alt="Ejercicios Python">
+                    <div id="python" onclick="linkPython();" class="overlay">
+                        <h3>Ejercicios en Python</h3>
+                        <p>Ejercicios estructurados desarrollados con Python</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/task.png" alt="Gestor de tareas">
+                    <div id="tareas" onclick="linkTareas();" class="overlay">
+                        <h3>Codigo de Gestor de Tareas</h3>
+                        <p>Desarrollado con Python y el Framework Flask para el backend y HTML, CSS para frontend</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <p class="copyright">&copy Copyright Esteban Salas - 2024</p>
+        </div>
+    </footer>
+   
+</body>
+<script src="funcion.js"></script>
+</html>
